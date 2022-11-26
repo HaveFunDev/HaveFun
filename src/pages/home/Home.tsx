@@ -11,7 +11,7 @@ const Home = () => {
 				</a>
 			</div>
 			<div className="gif">
-				<img src="public/start.gif" alt="purple astronaut" />
+				<img src="../public/start.gif" alt="purple astronaut" />
 			</div>
 		</div>
 	);
