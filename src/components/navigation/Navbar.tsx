@@ -4,7 +4,7 @@ import styles from "./Navbar.module.scss";
 const Navbar = () => {
 	return (
 		<nav className={styles.navbar}>
-			<img src="./public/logo.png" />
+			<img src="/public/logo.png" />
 			<ul>
 				<li>
 					<Link to="/">Home</Link>
