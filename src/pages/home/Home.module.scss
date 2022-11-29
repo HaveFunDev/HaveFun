@@ -11,6 +11,7 @@
 		h2 {
 			font-size: 3.6rem;
 			font-weight: bold;
+			padding-bottom: 2rem;
 		}
 		p {
 			font-size: 2rem;
@@ -18,6 +19,7 @@
 			line-height: 2rem;
 			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 				sans-serif;
+			padding-bottom: 2rem;
 		}
 		a {
 			color: var(--text-color-white);
@@ -30,6 +32,24 @@
 				background: #734fd6;
 				cursor: pointer;
 			}
+		}
+	}
+}
+
+@media (max-width: 769px) {
+	.container {
+		margin: 0;
+		width: 100%;
+		flex-wrap: wrap;
+		overflow-x: hidden;
+		.text-content {
+			max-width: 80%;
+			margin: 4rem 0 0;
+		}
+		img {
+			rotate: 30deg;
+			width: 100%;
+			z-index: -1;
 		}
 	}
 }
