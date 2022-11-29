@@ -10,9 +10,7 @@ const Home = () => {
 					<button>Join</button>
 				</a>
 			</div>
-			<div className="gif">
-				<img src="/start.gif" alt="purple astronaut" />
-			</div>
+			<img src="/start.gif" alt="purple astronaut" />
 		</div>
 	);
 };
