@@ -1,23 +1,31 @@
 import "./App.scss";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import {
+	RouterProvider,
+	createRoutesFromElements,
+	Route,
+	createBrowserRouter,
+} from "react-router-dom";
 import Home from "./pages/home/Home";
-import Projects from "./pages/projects/Projects";
+import Projects, { loader as projectsLoader } from "./pages/projects/Projects";
 import Members from "./pages/members/Members";
 import About from "./pages/about/About";
-import Navbar from "./components/navigation/Navbar";
+import RootLayout from "./pages/root-layout/RootLayout";
+
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route path="/" element={<RootLayout />}>
+			<Route index element={<Home />} />
+			<Route path="projects" element={<Projects />} loader={projectsLoader} />
+			<Route path="members" element={<Members />} />
+			<Route path="about" element={<About />} />
+		</Route>
+	)
+);
 
 function App() {
 	return (
 		<div className="App">
-			<BrowserRouter>
-				<Navbar />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="projects" element={<Projects />} />
-					<Route path="members" element={<Members />} />
-					<Route path="about" element={<About />} />
-				</Routes>
-			</BrowserRouter>
+			<RouterProvider router={router} />
 		</div>
 	);
 }
