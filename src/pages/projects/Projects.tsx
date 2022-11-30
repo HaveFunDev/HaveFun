@@ -17,8 +17,8 @@ const Projects = () => {
 	});
 
 	return (
-		<div className={styles.container}>
-			<h2>OUR PROJECTS</h2>
+		<div className="container">
+			<h2 className="page-title">OUR PROJECTS</h2>
 			<div className={styles["list-container"]}>{projectList}</div>
 		</div>
 	);

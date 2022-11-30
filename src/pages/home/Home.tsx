@@ -5,7 +5,7 @@ const Home = () => {
 		<div className={styles.container}>
 			<div className={styles["text-content"]}>
 				<h2>Welcome!</h2>
-				<p>Start having fun by creating awesome projects with others!</p>
+				<p>Start having fun creating awesome projects with others!</p>
 				<a href="https://github.com/HaveFunDev" target="_blank">
 					<button>Join</button>
 				</a>
