@@ -1,6 +1,6 @@
 
-export const getProjects = async () => {
-	const response = await fetch("https://api.github.com/orgs/HaveFunDev/repos");
+export const getData = async (url: string) => {
+	const response = await fetch(url);
 	if (!response.ok) {
 		throw { message: "failed to fetch projects!", status: 500 };
 	}
