@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import ProjectCard from "../../components/project-card/ProjectCard";
-import { getProjects } from "../../util/api";
+import { getData } from "../../util/api";
 import styles from "./Projects.module.scss";
 
 const Projects = () => {
@@ -26,4 +26,5 @@ const Projects = () => {
 
 export default Projects;
 
-export const loader = () => getProjects();
+export const loader = () =>
+	getData("https://api.github.com/orgs/HaveFunDev/repos");
