@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
+import animations from "../../animations/animations.module.scss";
 
 const Navbar = () => {
 	const [showNavMobile, setShowNavMobile] = useState(false);
@@ -11,11 +12,11 @@ const Navbar = () => {
 
 	return (
 		<div className={styles.navbar}>
-			<img src="/logo.png" className={styles.logo} />
+			<img src="/logo.png" className={`${styles.logo}`} />
 			<nav
 				className={`${showNavMobile ? styles.mobile : ""} ${
 					styles.navigation
-				}`}>
+				} `}>
 				<ul
 					onClick={() => {
 						showNavMobile && handleShowMobile();
