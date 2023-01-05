@@ -12,3 +12,24 @@
 .animate {
 	animation: animate-left 1s ease-out both;
 }
+
+@keyframes animate-loader {
+	0% {
+		gap: 0;
+	}
+	50% {
+		gap: 2rem;
+	}
+	60% {
+		gap: 2rem;
+		rotate: 180deg;
+	}
+	100% {
+		gap: 0;
+		rotate: 360deg;
+	}
+}
+
+.animate-loader {
+	animation: animate-loader 3s infinite both;
+}
